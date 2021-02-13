@@ -13,6 +13,10 @@ int abc (int a, int b, int c)
 
 int main()
 {
-    cout << abc(2,1,0) << endl;
+    try { cout << abc(2,1,0); }
+    catch (const char*& e) {
+        cout << "an exception hash been thrown: " << e << endl;
+    }
+    return 0;
 }
 
